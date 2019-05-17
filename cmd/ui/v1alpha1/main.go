@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/kubeflow/katib/pkg/ui"
-	"github.com/pressly/chi"
 	"net/http"
+
+	"github.com/kubeflow/katib/pkg/ui/v1alpha1"
+	"github.com/pressly/chi"
 )
 
 func main() {

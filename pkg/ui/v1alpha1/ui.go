@@ -11,7 +11,7 @@ import (
 
 	common "github.com/kubeflow/katib/pkg/common/v1alpha1"
 	studyjobv1alpha1 "github.com/kubeflow/katib/pkg/api/operators/apis/studyjob/v1alpha1"
-	"github.com/kubeflow/katib/pkg/api/v1alpha1"
+	api "github.com/kubeflow/katib/pkg/api/v1alpha1"
 	"github.com/kubeflow/katib/pkg/manager/v1alpha1/studyjobclient"
 
 	"github.com/pressly/chi"
@@ -375,7 +375,7 @@ func (k *KatibUIHandler) MetricsCollectorTemplate(w http.ResponseWriter, r *http
 		MetricsCollectorTemplate map[string]string
 	}
 	mtv := MetricsCollectorTemplateView{
-		IDList: &IDList{},
+		IDList:                   &IDList{},
 		MetricsCollectorTemplate: mt,
 	}
 	if err != nil {
